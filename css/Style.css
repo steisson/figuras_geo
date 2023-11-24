@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-width: 100vh;
+    background:url(../img/6189802_3196436.jpg) ;    
+}
+
+section{
+    width: 90%;
+    margin: 100px auto;
+    border: 2px solid #fff;
+    background: #0000009a;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    color: #fff;
+    font-size:40px;
+    padding: 20px;
+}
+
+.left,
+.right{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #00ff6a;
+
+}
+
+button{
+    padding: 10px 3px;
+    background: #000;
+    color: #00ff6a;
+    font-size: 20px;
+    border-radius: 0 20px 0 20px;
+    border: 1px solid #fff;
+    transition: .4s;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 0 12px -3px #00ff6a;
+}
+
+button:hover{
+    border-radius: 20px 0 20px 0;
+    background:#00ff6a;
+    border: #000;
+    color: #000;
+    box-shadow: 0 0 12px 1px #fff;
+}
+
+
+#figura{
+    width: 200px;
+    height: 200px;
+    background: #000;
+    border:2px solid #00ff6a;
+    margin: 40px auto;
+    box-shadow: 0 0 12px 1px #fff;
+    transition: 2s;
+}
+/* se agrega una atributo clase en este caso seria circulo  */
+#figura.circulo{
+    border-radius: 50%;
+    background: #00ff6a;
+    border: 2px solid #000;
+    transform:rotate(-300deg);
+}
+
+#figura.rectangulo{
+    width: 200px;
+    height: 100px;
+    background: #00ff6a;
+    border-radius: 10px;
+    border: 2px solid #000;
+    transform: 300deg;
+}
+
+#figura.rombo{
+   width: 200px;
+   height: 200px;
+   background: #00ff6a;
+   border: 2px solid #000;
+   transform:rotate(-45deg);
+}
+
+#figura.imagen{
+    width: 200px;
+    height: 200px;
+    background: #000;
+    border:2px solid #00ff6a;
+    background-image: url(/img/9259351.jpg);
+    background-size: cover;
+    transform: scale(1); 
+    animation: aparecer 2s ease-out forwards;
+}
+
+#figura.gif{
+    width: 200px;
+    height: 200px;
+    background: #000;
+    border:2px solid #00ff6a;
+    background-image: url(/img/9259351.jpg);
+    background-size: cover;
+    transform: scale(1); 
+    animation: aparecer 2s ease-out forwards;
+}
+/* aparecer seria como la id para hacer una animacion */
+@keyframes aparecer {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#figura.triangulo{
+        width: 0px;
+        height: 50px;
+        border-bottom: 200px solid #00ff6a;
+        border-right: 150px solid transparent;
+        border-top: 200px solid transparent;
+        border-left: 150px solid transparent;
+        background: none;
+        margin-top: -150px;
+        box-shadow: none;
+    }
+
+.left.active,
+.right.active{
+    border: 2px solid  black;
+}
+
+#figura.hoja{
+    padding: 10px 3px;
+    background: #00ff6a;
+    font-size: 20px;
+    border-radius: 0 90px 0 90px;
+    border: 1px solid #000;
+    transition: 0.4s;   
+}
+
+#figura.pacman{
+    background: transparent;
+    width: 1px;
+    height: 1px;
+    border: 60px solid #00ff6a;
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: none;   
+}
+
+#figura.huevo{
+    width: 200px;
+    height: 275px;
+    background: burlywood;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+
+#figura.trapecio {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #00ff6a;
+    border-top: transparent;
+    background: none;
+    box-shadow: none;
+    
+}
+
+#figura.luna {
+    width: 150px;
+    height: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 40px 40px 0 #00ff6a;
+    -webkit-box-shadow: 30px 10px 0 #00ff6a;
+    box-shadow: 30px 10px 0 #00ff6a;
+    border-top: transparent;
+    background: none;
+    border: none; 
+}
+
+#figura.moveTop{
+    transform: translateY(-50px);
+    transition: 0.8s;
+}
+
+#figura.moveLeft{
+    transform: translateX(-50px);
+    transition: 0.8s;
+}
+
+#figura.moveButton{
+    transform: translateY(+50px);
+    transition: 0.8s;
+}
+
+#figura.moveRight{
+    transform: translateX(+50px);
+    transition: 0.8s;
+}
+
+#figura.gif{
+    width: 200px;
+    height: 200px;
+    background: #000;
+    border:2px solid #00ff6a;
+    background-image: url(/img/g32K.gif);
+    background-size: cover;
+    transform: scale(1); 
+    animation: aparecer 2s ease-out forwards;
+}
+
+
+.panel-lateral{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    background: #00ff6a83;
+    text-align: center;
+    padding: 60px 30px;
+    height: 100vh;
+    transition: .4s;   
+}
+
+.panel-lateral.active{
+    left: 0;
+}
+
+.panel-lateral h2{
+    color: #000000;
+}
+
+.panel-lateral a{
+    background: #000;
+    color: #00ff6a;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.panel-lateral a:hover{
+    transform: scale(1.07);
+}
+
+.panel-lateral a.close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: transparent;
+    color: #f0f8ff;
+    font-size: 22px;
+    border: transparent;
+}
+
+.panel-superior{
+    position: absolute;
+    z-index: 9;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    background: #00ff6a83;
+    text-align: center;
+    padding: 60px 30px;
+    height: 50vh;
+    transition: .4s;   
+}
+
+.panel-superior.active{
+    top: 0;
+}
+
+.panel-superior h2{
+    color: #000000;
+}
+
+.panel-superior a{
+    background: #000;
+    color: #00ff6a;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.panel-superiror a:hover{
+    transform: scale(1.07);
+}
+
+.panel-superiror a.close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: transparent;
+    color: #f0f8ff;
+    font-size: 22px;
+    border: transparent;
+}
+
+.imagenFondo.active{
+    background: url(/img/3860709.jpg);
+    background-size: cover;
+    }
+
+    #figura.cambioColorPrin{
+        border:3px solid #14131433
+    
+    }
+
+#figura.spaceInvader {
+    position: absolute;
+    box-shadow:
+    0 0 0 1em #00ff6a,                   /* Cuerpo central */
+    0 1em 0 1em #00ff6a,                 /* Parte superior */
+    -2.5em 1.5em 0 .5em #00ff6a,         /* Antena izquierda */
+    2.5em 1.5em 0 .5em #00ff6a,          /* Antena derecha */
+    -3em -3em 0 0 #00ff6a,               /* Esquina superior izquierda */
+    3em -3em 0 0 #00ff6a,                /* Esquina superior derecha */
+    -2em -2em 0 0 #00ff6a,               /* Esquina izquierda */
+    2em -2em 0 0 #00ff6a,                /* Esquina derecha */
+    -3em -1em 0 0 #00ff6a,               /* Borde izquierdo superior */
+    -2em -1em 0 0 #00ff6a,               /* Borde izquierdo inferior */
+    2em -1em 0 0 #00ff6a,                /* Borde derecho inferior */
+    3em -1em 0 0 #00ff6a,                /* Borde derecho superior */
+    -4em 0 0 0 #00ff6a,                  /* Borde izquierdo */
+    -3em 0 0 0 #00ff6a,                  /* Borde izquierdo central */
+    3em 0 0 0 #00ff6a,                   /* Borde derecho central */
+    4em 0 0 0 #00ff6a,                   /* Borde derecho */
+    -5em 1em 0 0 #00ff6a,                /* Esquina inferior izquierda */
+    -4em 1em 0 0 #00ff6a,                /* Borde inferior izquierdo */
+    4em 1em 0 0 #00ff6a,                 /* Borde inferior derecho */
+    5em 1em 0 0 #00ff6a,                 /* Esquina inferior derecha */
+    -5em 2em 0 0 #00ff6a,                /* Borde inferior izquierdo exterior */
+    5em 2em 0 0 #00ff6a,                 /* Borde inferior derecho exterior */
+    -5em 3em 0 0 #00ff6a,                /* Borde inferior izquierdo exterior */
+    -3em 3em 0 0 #00ff6a,                /* Borde inferior izquierdo interior */
+    3em 3em 0 0 #00ff6a,                 /* Borde inferior derecho interior */
+    5em 3em 0 0 #00ff6a,                 /* Borde inferior derecho exterior */
+    -2em 4em 0 0 #00ff6a,                /* Borde inferior izquierdo interior */
+    -1em 4em 0 0 #00ff6a,                /* Borde inferior izquierdo interior */
+    1em 4em 0 0 #00ff6a,                 /* Borde inferior derecho interior */
+    2em 4em 0 0 #00ff6a;                 /* Borde inferior derecho interior */
+    background: #00ff6a;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    margin: 125px 0 0 350px;
+}
